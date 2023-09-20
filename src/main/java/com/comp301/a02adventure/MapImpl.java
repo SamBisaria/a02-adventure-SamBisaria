@@ -1,7 +1,7 @@
 package com.comp301.a02adventure;
 
 public class MapImpl implements Map {
-  private final Cell[][] map;
+  private Cell[][] map;
   private final int items;
   private final int width;
   private final int height;
@@ -36,12 +36,12 @@ public class MapImpl implements Map {
 
   @Override
   public Cell getCell(Position position) {
-    if (position.getX() < 0
+    if (position == null
+        || position.getX() < 0
         || position.getY() < 0
         || position.getX() > width
         || position.getY() > height) {
-      throw new IndexOutOfBoundsException(
-          "Error: Invalid parameter value - " + position.getX() + ", " + position.getY());
+      throw new IndexOutOfBoundsException("Error: Invalid parameter value");
     }
     return map[position.getX()][position.getY()];
   }
