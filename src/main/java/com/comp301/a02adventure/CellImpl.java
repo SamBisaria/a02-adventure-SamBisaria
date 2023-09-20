@@ -2,10 +2,10 @@ package com.comp301.a02adventure;
 
 public class CellImpl implements Cell {
   private final Position location;
-  public String name;
-  public String description;
-  Inventory chest;
-  public boolean visited = false;
+  private String name;
+  private String description;
+  private Inventory chest;
+  private boolean visited = false;
 
   public CellImpl(int x, int y) {
     location = new PositionImpl(x, y);
@@ -15,11 +15,11 @@ public class CellImpl implements Cell {
 
   public CellImpl(int x, int y, String Name, String Description) {
     this(x, y);
-    name = Name;
-    description = Description;
-    if (name == null || description == null) {
+    if (Name == null || Description == null) {
       throw new IllegalArgumentException("Error: String cannot be null");
     }
+    name = Name;
+    description = Description;
   }
 
   @Override
@@ -54,7 +54,7 @@ public class CellImpl implements Cell {
 
   @Override
   public void setName(String Name) {
-    if (name == null) {
+    if (Name == null) {
       throw new IllegalArgumentException("Error: Parameter cannot be null");
     }
     name = Name;
@@ -62,7 +62,7 @@ public class CellImpl implements Cell {
 
   @Override
   public void setDescription(String Description) {
-    if (description == null) {
+    if (Description == null) {
       throw new IllegalArgumentException("Error: Parameter cannot be null");
     }
     description = Description;
@@ -70,10 +70,10 @@ public class CellImpl implements Cell {
 
   @Override
   public void setChest(Inventory Chest) {
-    chest = Chest;
-    if (chest == null) {
+    if (Chest == null) {
       throw new IllegalArgumentException("Error: Parameter cannot be null");
     }
+    chest = Chest;
   }
 
   @Override

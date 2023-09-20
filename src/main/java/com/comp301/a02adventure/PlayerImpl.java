@@ -3,7 +3,7 @@ package com.comp301.a02adventure;
 public class PlayerImpl implements Player {
   private final String name;
   private Position location;
-  Inventory inv = new InventoryImpl();
+  private Inventory inv = new InventoryImpl();
 
   public PlayerImpl(String Name, int startX, int startY) {
     name = Name;

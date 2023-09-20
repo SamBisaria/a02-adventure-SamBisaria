@@ -1,17 +1,17 @@
 package com.comp301.a02adventure;
 
 public class MapImpl implements Map {
-  Cell[][] map;
+  private final Cell[][] map;
   private final int items;
   private final int width;
   private final int height;
 
   public MapImpl(int Width, int Height, int numItems) {
-    width = Width;
-    height = Height;
-    if (width < 0 || height < 0) {
+    if (Width < 1 || Height < 1) {
       throw new IllegalArgumentException("Error: Invalid parameter value");
     }
+    width = Width;
+    height = Height;
     map = new Cell[width][height];
     items = numItems;
   }

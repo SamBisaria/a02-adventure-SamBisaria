@@ -19,6 +19,9 @@ public class ItemImpl implements Item {
 
   @Override
   public boolean equals(Object other) {
+    if (other == null) {
+      return false;
+    }
     Item Other = (Item) other;
     return Objects.equals(Other.getName(), Name);
   }
