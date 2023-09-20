@@ -1,7 +1,5 @@
 package com.comp301.a02adventure;
 
-import sun.security.krb5.internal.crypto.Des;
-
 public class CellImpl implements Cell {
   private final Position location;
   public String name;
