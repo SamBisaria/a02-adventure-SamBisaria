@@ -9,7 +9,7 @@ public interface Game {
   /** Getter method for the Player's name */
   String getPlayerName();
 
-  /** Getter method for a cloned List of the the Items in the Player's Inventory */
+  /** Getter method for a cloned List of the Items in the Player's Inventory */
   List<Item> getPlayerItems();
 
   /** Returns true if all items on the map have been collected by the player */

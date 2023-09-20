@@ -5,7 +5,7 @@ package com.comp301.a02adventure;
  * Once you've gotten 100% on Gradescope, uncomment this code to play the game!
  */
 
-/*
+
 public class MapUNC extends MapImpl {
   public MapUNC() {
     super(10, 10, 10);
@@ -337,4 +337,3 @@ public class MapUNC extends MapImpl {
     getCell(9, 4).setChest(new InventoryImpl());
   }
 }
-*/
