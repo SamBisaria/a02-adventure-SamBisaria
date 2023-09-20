@@ -52,6 +52,7 @@ public class MapImpl implements Map {
       throw new IndexOutOfBoundsException("Error: Invalid parameter value - " + x + ", " + y);
     }
     Cell a = new CellImpl(x, y);
+    map[x][y] = a;
   }
 
   @Override
