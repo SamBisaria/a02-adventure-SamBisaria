@@ -29,7 +29,7 @@ public class MapImpl implements Map {
   @Override
   public Cell getCell(int x, int y) {
     if (x < 0 || y < 0 || x > width || y > height) {
-      throw new IllegalArgumentException("Error: Invalid parameter value");
+      throw new IndexOutOfBoundsException("Error: Invalid parameter value");
     }
     return map[x][y];
   }
@@ -40,7 +40,7 @@ public class MapImpl implements Map {
         || position.getY() < 0
         || position.getX() > width
         || position.getY() > height) {
-      throw new IllegalArgumentException(
+      throw new IndexOutOfBoundsException(
           "Error: Invalid parameter value - " + position.getX() + ", " + position.getY());
     }
     return map[position.getX()][position.getY()];
@@ -49,7 +49,7 @@ public class MapImpl implements Map {
   @Override
   public void initCell(int x, int y) {
     if (x < 0 || y < 0 || x > width || y > height) {
-      throw new IllegalArgumentException("Error: Invalid parameter value - " + x + ", " + y);
+      throw new IndexOutOfBoundsException("Error: Invalid parameter value - " + x + ", " + y);
     }
     Cell a = new CellImpl(x, y);
   }
