@@ -1,8 +1,8 @@
 package com.comp301.a02adventure;
 
 public class PositionImpl implements Position {
-  public int x;
-  public int y;
+  public final int x;
+  public final int y;
 
   public PositionImpl(int X, int Y) {
     x = X;

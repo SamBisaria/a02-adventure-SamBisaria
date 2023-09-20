@@ -1,5 +1,7 @@
 package com.comp301.a02adventure;
 
+import java.util.Objects;
+
 public class ItemImpl implements Item {
   private final String Name;
 
@@ -18,7 +20,7 @@ public class ItemImpl implements Item {
   @Override
   public boolean equals(Object other) {
     Item Other = (Item) other;
-    return Other.getName() == Name;
+    return Objects.equals(Other.getName(), Name);
   }
 
   @Override

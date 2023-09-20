@@ -1,9 +1,9 @@
 package com.comp301.a02adventure;
 
 public class PlayerImpl implements Player {
-  public String name;
-  Position location;
-  Inventory inv;
+  private final String name;
+  private Position location;
+  Inventory inv = new InventoryImpl();
 
   public PlayerImpl(String Name, int startX, int startY) {
     name = Name;

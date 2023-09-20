@@ -3,8 +3,8 @@ package com.comp301.a02adventure;
 import java.util.List;
 
 public class GameImpl implements Game {
-  Map map;
-  Player player;
+  private Map map;
+  private final Player player;
 
   public GameImpl(Map map1, Player player1) {
     if (map1 == null || player1 == null) {

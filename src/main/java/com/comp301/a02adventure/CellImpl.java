@@ -1,7 +1,9 @@
 package com.comp301.a02adventure;
 
+import sun.security.krb5.internal.crypto.Des;
+
 public class CellImpl implements Cell {
-  Position location;
+  private final Position location;
   public String name;
   public String description;
   Inventory chest;
@@ -54,10 +56,10 @@ public class CellImpl implements Cell {
 
   @Override
   public void setName(String Name) {
-    name = Name;
     if (name == null) {
       throw new IllegalArgumentException("Error: Parameter cannot be null");
     }
+    name = Name;
   }
 
   @Override
@@ -65,6 +67,7 @@ public class CellImpl implements Cell {
     if (description == null) {
       throw new IllegalArgumentException("Error: Parameter cannot be null");
     }
+    description = Description;
   }
 
   @Override
