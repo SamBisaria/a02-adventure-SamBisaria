@@ -3,7 +3,7 @@ package com.comp301.a02adventure;
 import java.util.List;
 
 public class GameImpl implements Game {
-  private Map map;
+  private final Map map;
   private final Player player;
 
   public GameImpl(Map map1, Player player1) {
